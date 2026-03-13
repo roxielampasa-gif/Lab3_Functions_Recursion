@@ -1,5 +1,7 @@
-#Student Identity Configuration
+# #main.py
+import grades
 
+# Student Identity Configuration
 LAST_NAME = "Nacional"
 STUDENT_ID = "TUPM-25-0363"
 
@@ -8,13 +10,13 @@ ID_SUM = sum(int(d) for d in STUDENT_ID if d.isdigit())
 NAME_LENGTH = len(LAST_NAME)
 
 # Generate student-unique scores
-scores = [
-    SEED_DIGIT 10,
+scores =  [
+    SEED_DIGIT * 10,
     ID_SUM % 100,
     NAME_LENGTH * 7
 ]
 
-average = grades.compute_average (scores)
+average = grades.compute_average(scores)
 grade = grades.assign_grade(average)
 remark = grades.generate_remark(grade)
 
